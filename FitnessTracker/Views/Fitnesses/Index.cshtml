@@ -1,0 +1,100 @@
+﻿@model IEnumerable<FitnessTracker.Models.Fitness>
+
+<h2>Index</h2>
+<p>
+    <a asp-action="Create" class="btn btn-primary">Check BMI</a>
+</p>
+
+<!-- BMI Categories -->
+<div class="container mt-4">
+    <div class="row">
+        <!-- Underweight -->
+        <div class="col-md-4">
+            <div class="card border-info shadow-sm">
+                <div class="card-header bg-info text-white">
+                    Underweight (BMI < 18.5)
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Focus on higher protein and calorie intake to promote healthy weight gain.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Normal Weight -->
+        <div class="col-md-4">
+            <div class="card border-success shadow-sm">
+                <div class="card-header bg-success text-white">
+                    Normal Weight (BMI 18.5 - 24.9)
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Maintain a balanced diet with an appropriate macronutrient distribution.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overweight -->
+        <div class="col-md-4">
+            <div class="card border-warning shadow-sm">
+                <div class="card-header bg-warning text-white">
+                    Overweight (BMI ≥ 25)
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Focus on nutrient-dense, lower-calorie foods with adequate protein intake.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BMI Table -->
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th>Name</th>
+           
+            <th>Weight (kg)</th>
+            <th>Height (m)</th>
+            <th>BMI</th>  <!-- New Column Added -->
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+               
+                <td>@item.Weight</td>
+                <td>@item.Height</td>
+                <td>@item.Bmi.ToString("F2")</td>  <!-- Display BMI with 2 decimal places -->
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-secondary">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- CSS Styling -->
+<style>
+    .card {
+        border-radius: 12px;
+        transition: transform 0.2s ease-in-out;
+    }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+    .btn {
+        margin-right: 5px;
+    }
+</style>
