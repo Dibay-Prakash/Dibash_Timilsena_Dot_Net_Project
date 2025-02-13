@@ -4,7 +4,6 @@ The Fitness Tracker web application is a comprehensive platform designed to empo
 
 
 
-![Screenshot 2025-02-13 163843](https://github.com/user-attachments/assets/f7f481be-da09-4034-ab45-065cdf94f966
 
 
 
