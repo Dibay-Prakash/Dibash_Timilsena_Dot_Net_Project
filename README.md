@@ -1,3 +1,4 @@
+The Fitness Tracker web application is a comprehensive platform designed to empower users to take control of their health and fitness journey. Inspired by the user interface depicted in the provided image, this project focuses on providing a user-friendly experience for tracking fitness progress, setting goals, and staying motivated.
 ![Screenshot 2025-02-13 163859](https://github.com/user-attachments/assets/08ddba71-720b-4b0e-ba09-3f6e31ad754c)
 
 
