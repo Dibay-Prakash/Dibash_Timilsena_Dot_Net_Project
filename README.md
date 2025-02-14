@@ -1,4 +1,10 @@
-The Fitness Tracker web application is a comprehensive platform designed to empower users to take control of their health and fitness journey. Inspired by the user interface depicted in the provided image, this project focuses on providing a user-friendly experience for tracking fitness progress, setting goals, and staying motivated.
+This is a simple Fitness Tracker built as part of an academic project. The application allows users to input their height and weight to calculate their **BMI (Body Mass Index)** and receive recommendations based on their BMI category.  
+
+ Features  
+- Calculate BMI based on height and weight  
+- Display BMI category (Underweight, Normal, Overweight, Obese)  
+- User-friendly interface  
+- Lightweight and fast  
 ![Screenshot 2025-02-13 163859](https://github.com/user-attachments/assets/08ddba71-720b-4b0e-ba09-3f6e31ad754c)
 
 
